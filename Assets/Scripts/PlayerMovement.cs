@@ -1,21 +1,24 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     //X movement
-    public float playerSpeed = 5.0f;
-        
+    public float playerSpeed = 20.0f;
+
     float horizontalInput;
 
-    //player position
-    Vector3 playerPosition;
+    Rigidbody playerRb;
+
+    private void Start()
+    {
+        playerRb = GetComponent<Rigidbody>();
+    }
 
 
     private void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-
-        playerPosition = this.transform.position;
+       horizontalInput = Input.GetAxis("Horizontal");
 
     }
 
@@ -26,8 +29,9 @@ public class PlayerMovement : MonoBehaviour
 
     void MovePlayer()
     {
-        playerPosition.x += horizontalInput * playerSpeed * Time.deltaTime;
-        this.transform.position = playerPosition;
+        Vector3 movement = new Vector3(horizontalInput * playerSpeed, 0, 0);
+
+        playerRb.linearVelocity = movement;
     }
 }
   

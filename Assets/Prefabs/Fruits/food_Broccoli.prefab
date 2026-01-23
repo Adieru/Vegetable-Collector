@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3151695019734442887}
   - component: {fileID: 1303080619760073833}
   - component: {fileID: 3283108991733253014}
+  - component: {fileID: 78135113064601115}
   m_Layer: 0
   m_Name: food_Broccoli
   m_TagString: Food
@@ -118,3 +119,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &78135113064601115
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3789567437711745429}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.20823857, y: 0.30841848, z: 0.20609832}
+  m_Center: {x: 0.00354651, y: 0.14075528, z: -0.00080968067}

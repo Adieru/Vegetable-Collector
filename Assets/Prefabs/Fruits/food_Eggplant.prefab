@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6468958194182215226}
   - component: {fileID: 3153245406508564649}
   - component: {fileID: 8351845744016526260}
+  - component: {fileID: -3816632338980371328}
   m_Layer: 0
   m_Name: food_Eggplant
   m_TagString: Food
@@ -118,3 +119,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &-3816632338980371328
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3092550614098951077}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.21865076, y: 0.40727642, z: 0.1757446}
+  m_Center: {x: 0.051978946, y: -0.0099951625, z: 0.00012722984}

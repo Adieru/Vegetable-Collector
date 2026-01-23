@@ -8,7 +8,13 @@ public class DropItems : MonoBehaviour
 
     public GameObject Holder;
 
-    float SpawnTime = 3;
+    [SerializeField] float SpawnTime = 3;
+    float timer;
+
+    private void Start()
+    {
+        timer = SpawnTime;
+    }
 
     private void Update()
     {
@@ -32,7 +38,7 @@ public class DropItems : MonoBehaviour
             spawnObj.transform.position = Droppers[DropIndex].position;
 
             //Reset time
-            SpawnTime = 3;
+            SpawnTime = timer;
 
         }
     }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2338588387187724834}
   - component: {fileID: 4194830629472706625}
   - component: {fileID: 3117834054786307249}
+  - component: {fileID: -694700762784201921}
   m_Layer: 0
   m_Name: food_Cucumber
   m_TagString: Food
@@ -140,3 +141,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.31567448, y: 0.12057755, z: 0.12057755}
   m_Center: {x: 0.0007929951, y: 0, z: 0}
+--- !u!114 &-694700762784201921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3860271509692737105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0d72e72dfc4f2499937d155891ca1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemManager
+  score: 10
+  TmDeath: 2

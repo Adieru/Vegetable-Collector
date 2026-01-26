@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class DropItems : MonoBehaviour
@@ -6,41 +7,98 @@ public class DropItems : MonoBehaviour
 
     public GameObject[] Fregetable;
 
+    public GameObject Bomb;
+
     public GameObject Holder;
 
     [SerializeField] float SpawnTime = 3;
     float timer;
 
+    [SerializeField] float bombTime = 5;
+    float bombTimer;
+
+    int DropperSize;
+    int FruitSize;
+
     private void Start()
     {
+        //Timer
         timer = SpawnTime;
+        bombTimer = bombTime;
+
+        //Size of the holders
+        DropperSize = Droppers.Length;
+        FruitSize = Fregetable.Length;
+
     }
 
     private void Update()
     {
-        SpawnTime -= Time.deltaTime;
+        timer -= Time.deltaTime;
+        bombTimer -= Time.deltaTime;
 
-        spawnFruits((int)SpawnTime);
-
+        //Spawn
+        RandomSpawn();
 
     }
 
+    //Spawn Fruit
     void spawnFruits(int time)
     { 
         if(time <= 0)
         {
-            int DropIndex = Random.Range(0, Droppers.Length);
+            int DropIndex = Random.Range(0, DropperSize);
 
-            int FruitIndex = Random.Range(0, Fregetable.Length);
+            int FruitIndex = Random.Range(0, FruitSize);
 
+            //Spawn
             GameObject spawnObj = Instantiate(Fregetable[FruitIndex], Holder.transform);
 
             spawnObj.transform.position = Droppers[DropIndex].position;
 
             //Reset time
-            SpawnTime = timer;
+            timer = SpawnTime;
 
         }
+    }
+
+    //Spawn Bomb
+    void spawnBomb(int time)
+    {
+        if(time <= 0)
+        {
+            int DropIndex = Random.Range(0, DropperSize);
+
+            //Spawn
+            GameObject spawnObj = Instantiate(Bomb, Holder.transform);
+            spawnObj.transform.position = Droppers[DropIndex].position;
+
+            //Reset timer
+            bombTimer = bombTime;
+
+        }
+    }
+
+    //Random Spawner
+    void RandomSpawn()
+    {
+        //Random Spawn
+        int spawnNum = Random.Range(1, 3);
+
+        switch (spawnNum)
+        {
+
+            //Fruit
+            case 1:
+                spawnFruits((int)timer);
+                break;
+
+            //Bomb
+            case 2:
+                spawnBomb((int)bombTimer);
+                break;
+        }
+
     }
 
 }

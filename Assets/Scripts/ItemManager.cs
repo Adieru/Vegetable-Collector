@@ -4,14 +4,17 @@ using UnityEngine;
 public class ItemManager : MonoBehaviour
 {
 
-    public float TmDeath = 5f;
+    public int score = 10;
+
+
+    public float TmDeath = .5f;
 
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Food"))
+        if(collision.gameObject.CompareTag("Ground"))
         {
-            Destroy(collision.gameObject, TmDeath);
+            Destroy(this.gameObject, TmDeath);
         }
     }
 

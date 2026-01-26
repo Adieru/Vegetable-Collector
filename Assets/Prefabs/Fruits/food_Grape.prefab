@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 600598593525541263}
   - component: {fileID: 7986782773459468679}
   - component: {fileID: -8996788028628530895}
+  - component: {fileID: -6084326763698518739}
   m_Layer: 0
   m_Name: food_Grape
   m_TagString: Food
@@ -140,3 +141,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.30580956, y: 0.39027286, z: 0.32652444}
   m_Center: {x: 0.053387046, y: -0.067478925, z: -0.057849776}
+--- !u!114 &-6084326763698518739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8071267183407910950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0d72e72dfc4f2499937d155891ca1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemManager
+  score: 10
+  TmDeath: 2

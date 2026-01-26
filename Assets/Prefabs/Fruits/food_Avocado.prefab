@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5617648470260929880}
   - component: {fileID: 3593410490048332403}
   - component: {fileID: 6508734902749889398}
+  - component: {fileID: -2741759905792278216}
   m_Layer: 0
   m_Name: food_Avocado
   m_TagString: Food
@@ -140,3 +141,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.16898707, y: 0.25699276, z: 0.16898707}
   m_Center: {x: 0.0000000037252903, y: -0.00071693957, z: 0.0000000037252903}
+--- !u!114 &-2741759905792278216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5406405142904846416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0d72e72dfc4f2499937d155891ca1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemManager
+  score: 10
+  TmDeath: 2

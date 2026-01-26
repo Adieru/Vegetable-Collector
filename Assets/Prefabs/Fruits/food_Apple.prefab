@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 503746140867650383}
   - component: {fileID: 651946597859794889}
   - component: {fileID: 5487809324606981465}
+  - component: {fileID: 7576519306680352812}
   m_Layer: 0
   m_Name: food_Apple
   m_TagString: Food
@@ -140,3 +141,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.14538261, y: 0.13283806, z: 0.14538258}
   m_Center: {x: 0, y: -0.004246412, z: 0}
+--- !u!114 &7576519306680352812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4059620665078057736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0d72e72dfc4f2499937d155891ca1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemManager
+  score: 10
+  TmDeath: 2

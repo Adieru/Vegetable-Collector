@@ -83,19 +83,23 @@ public class DropItems : MonoBehaviour
     void RandomSpawn()
     {
         //Random Spawn
-        int spawnNum = Random.Range(1, 3);
+        int spawnNum = Random.Range(1, 10);
 
         switch (spawnNum)
         {
-
-            //Fruit
+       
+            //Bomb
             case 1:
-                spawnFruits((int)timer);
+            case 2:
+            case 3:
+                spawnBomb((int)bombTimer);
                 break;
 
-            //Bomb
-            case 2:
-                spawnBomb((int)bombTimer);
+
+
+            //fruit
+            default:
+                spawnFruits((int)timer);
                 break;
         }
 

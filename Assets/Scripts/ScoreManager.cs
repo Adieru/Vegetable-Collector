@@ -1,14 +1,23 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class ScoreManager : MonoBehaviour
 {
     //Score
     [SerializeField] TextMeshProUGUI scoreText;
 
+    //GameOver panel
+    [SerializeField] GameObject gameOverPanel;
+
     //Fruit Value
     int fruitVal = 0;
 
+    private void Start()
+    {
+        gameOverPanel.SetActive(false);
+    }
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,13 +38,30 @@ public class ScoreManager : MonoBehaviour
         {
 
             //Animation
+            other.GetComponentInChildren<ParticleSystem>().Play();
 
             //Sound Effect
-            
+
             //Game Over
-            Debug.Log("Game Over!");
+            StartCoroutine(GameOver());
+
+
+
         }
     }
+
+    IEnumerator GameOver()
+    {
+        yield return new WaitForSeconds(2f);
+
+        gameOverPanel.SetActive(true);
+
+        //Stop time 
+        Time.timeScale = 0f;
+
+
+    }
+
 
 
 }

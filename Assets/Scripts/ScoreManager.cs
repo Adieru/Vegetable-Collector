@@ -52,7 +52,7 @@ public class ScoreManager : MonoBehaviour
 
     IEnumerator GameOver()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.4f);
 
         gameOverPanel.SetActive(true);
 

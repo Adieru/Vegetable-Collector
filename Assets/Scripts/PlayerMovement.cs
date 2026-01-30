@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-       horizontalInput = Input.GetAxis("Horizontal");
+       //horizontalInput = Input.GetAxis("Horizontal");
 
     }
 
@@ -32,6 +32,21 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movement = new Vector3(horizontalInput * playerSpeed, 0, 0);
 
         playerRb.linearVelocity = movement;
+    }
+
+    public void MoveLeft()
+    {
+        horizontalInput = -0.5f;
+    }
+
+    public void MoveRight()
+    {
+        horizontalInput = 0.5f;
+    }
+
+    public void stopMove()
+    {
+        horizontalInput = 0;
     }
 }
   

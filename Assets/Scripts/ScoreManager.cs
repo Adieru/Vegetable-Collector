@@ -29,6 +29,8 @@ public class ScoreManager : MonoBehaviour
             //Update score text
             scoreText.text = "Score: " + fruitVal.ToString();
 
+            //Sound Effect
+
 
             Destroy(other.gameObject, 0.1f);
         }

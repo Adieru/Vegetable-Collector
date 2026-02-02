@@ -13,6 +13,17 @@ public class ScoreManager : MonoBehaviour
     //Fruit Value
     int fruitVal = 0;
 
+
+    //Audio Source
+    [SerializeField] AudioSource audioSource;
+
+    //Bomb SFX
+    [SerializeField] AudioClip bombSFX;
+
+    //Fruit SFX
+    [SerializeField] AudioClip fruitSFX;
+
+
     private void Start()
     {
         gameOverPanel.SetActive(false);
@@ -30,6 +41,8 @@ public class ScoreManager : MonoBehaviour
             scoreText.text = "Score: " + fruitVal.ToString();
 
             //Sound Effect
+            audioSource.PlayOneShot(fruitSFX);
+
 
 
             Destroy(other.gameObject, 0.1f);
@@ -43,6 +56,7 @@ public class ScoreManager : MonoBehaviour
             other.GetComponentInChildren<ParticleSystem>().Play();
 
             //Sound Effect
+            audioSource.PlayOneShot(bombSFX);
 
             //Game Over
             StartCoroutine(GameOver());
@@ -61,6 +75,8 @@ public class ScoreManager : MonoBehaviour
         //Stop time 
         Time.timeScale = 0f;
 
+        //Player Distroy
+        Destroy(this.gameObject);
 
     }
 

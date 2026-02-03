@@ -156,6 +156,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _XRMotionVectorsPass: 1
     - _ZWrite: 0
     - _glowFrequency: 1
     - _glowMax: 1

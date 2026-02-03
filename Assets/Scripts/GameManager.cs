@@ -3,6 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    //Sounds
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip buttonSFX;
+
     //Restart button
     public void RestartScene()
     {
@@ -29,6 +33,12 @@ public class GameManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    //Button Effects
+    public void ButtonSound()
+    {
+        audioSource.PlayOneShot(buttonSFX);
     }
 
 }
